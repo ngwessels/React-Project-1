@@ -3,6 +3,7 @@ import './pageStyles.scss';
 import TopAd from './TopAd';
 import TopNews from './TopNews';
 import Trending from './Trending';
+import WeatherMap from './WeatherMap';
 
 
 
@@ -21,8 +22,9 @@ function PageBody() {
       <TopAd />
       <div style={pageStyle}>
         <TopNews />
-          <Trending />
         <hr/>
+        <Trending />
+        <WeatherMap />
       </div>
     </div>
 

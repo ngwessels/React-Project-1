@@ -116,3 +116,31 @@
     }
   }
 }
+
+
+.weatherRadar {
+  width: 830px;
+  height: 630px;
+  img {
+    width: 100%;
+  }
+}
+.ads {
+  margin-top: 25px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  #bigad {
+    width: 298px;
+    height: 248px;
+  }
+  .images {
+    width: 285px;
+    height: 100px;
+
+    img {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+}
