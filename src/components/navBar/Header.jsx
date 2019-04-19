@@ -12,9 +12,6 @@ function Header(){
     backgroundColor: 'black',
     height: '145px',
   };
-  let wrap = {
-    
-  }
   return (
     <div style={headerStyle}>
       <Top />

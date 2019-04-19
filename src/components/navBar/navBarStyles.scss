@@ -82,3 +82,82 @@ width: 100%;
     }
   }
 }
+
+.bottom-nav-width {
+  max-width: 1370px;
+  height: 20px;
+  margin: 0 auto;
+  ul {
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 12px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    li:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+a {
+  color: white;
+  list-style: none;
+}
+
+
+
+
+
+@media screen and (max-width: 770px) {
+  .menu {
+    width: 60px;
+    #us {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #More {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  #Maps {
+    display: none;
+  }
+}
+@media screen and (max-width: 530px) {
+  #Monthly {
+    display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  #Weekend {
+    display: none;
+  }
+}
+@media screen and (max-width: 360px) {
+  #TenDay {
+    display: none;
+  }
+}
+@media screen and (max-width: 287px) {
+  #FiveDay {
+    display: none;
+  }
+}
+@media screen and (max-width: 220px) {
+  #Hourly {
+    display: none;
+  }
+}
