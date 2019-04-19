@@ -4,10 +4,14 @@ import React from 'react';
 
 function TopNews() {
 
-
+  let firstSection = {
+    display: 'flex',
+    flexDirection: 'row',
+    minHeight: '650px',
+  };
 
   return (
-    <div className='firstSection'>
+    <div style={firstSection}>
       <div className='left-column'>
         <div className='container'>
 
