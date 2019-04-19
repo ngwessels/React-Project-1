@@ -26,11 +26,9 @@ function TopAd() {
   return (
     <div style={imageBody}>
       <div style={imageStored}>
-        <img style={image} src={require('../../assets/img/ad1.png')} alt='Ad' />
+        <img className='imgHover' style={image} src={require('../../assets/img/ad1.png')} alt='Ad' />
       </div>
     </div>
-
-
   );
 }
 
