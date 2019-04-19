@@ -44,7 +44,7 @@ function Top() {
       </div>
       <div className='menu'>
         <a><img src={require('../../assets/img/us.png')} alt='US Fahrenheight' id='us'/></a>
-        <div class='vl'>
+        <div className='vl'>
         </div>
         <a><img src={require('../../assets/img/menu.png')} alt='Menu' id='menu'/></a>
 
