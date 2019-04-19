@@ -6,8 +6,17 @@ import Middle from './Middle';
 import Bottom from './Bottom';
 
 function Header(){
+
+  let headerStyle = {
+    width: '100%',
+    backgroundColor: 'black',
+    height: '145px',
+  };
+  let wrap = {
+    
+  }
   return (
-    <div>
+    <div style={headerStyle}>
       <Top />
       <Middle />
       <Bottom />
