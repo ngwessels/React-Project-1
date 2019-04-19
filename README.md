@@ -1,40 +1,88 @@
-# _React Template_
+# _Clone of Weather.com_
 
-## _DO NOT TOUCH THE `Webpack-dev-server` dependency unless you know what your doing. If you update it there will be errors that break the application!_
+_Published_ **April 19th 2018**<br>
+_Author_ **Nate Wessels**
 
-#### _This is a template using webpack for React, 04/15/19_
+1. [Description](#description)
+1. [Installation](#installation)
+1. [Known Bugs](#known-bugs)
+1. [Technologies Used](#technologies-used)
+1. [License](#license)
 
-#### By _**Ryan McLean**_
+### Description
 
-## Description
+_This Application will show a cloned version of the Weather Channel Website. It is using the Angular framework. This application shows the use of inputs and outputs between child and parent components. This application also shows the use of firebase database, and firebase hosting. Go to https://angular-project-acaab.firebaseapp.com/ to look at the page_
 
-_This is a template that has been created for anyone to use. Clone it down and it will work. This template also includes scss styling_
+### Specs
 
-## Setup/Installation Requirements
+_This application will display a cloned version of the "www.weather.com" website using angular_
 
-* _Run `git clone https://github.com/Lilkgb/react-template` in your terminal of choice_
-* _Navigate to where you put the folder inside your terminal and run `npm install`_
-* _After the install is complete you can run `npm run start` to see a live version of the website._
+### Real Website
+
+#### Top of the Real Website
+![Top of the real Weather Channel Website](src/assets/img/top-real.png)
+#### Body of the Real Website
+![Body of the real Weather Channel Website](src/assets/img/body-real.png)
+#### Footer of the Real Website
+![Footer of the Real Weather Channel Website](src/assets/img/footer-real.png)
+
+### Cloned Webiste
+
+#### Top of the Cloned Website
+![Top of the Cloned Weather Channel Website](src/assets/img/top-clone.png)
+#### Body of the Cloned Website
+![Body of the Cloned Weather Channel Website](src/assets/img/body-clone.png)
+#### Footer of the Cloned Website
+![Footer of the Cloned Weather Channel Website](src/assets/img/footer-clone.png)
 
 
-## Known Bugs
+### Installation
+_Below are the steps to follow to install this application_
+  1. First make sure that you have installed npm on your device. Follow the instructs on https://www.npmjs.com/get-npm if you have not.
+  2. Next we need to install the repository onto this device. Go to your terminal
+  3. Type in `cd desktop`
+  4. New to get the repository from Github we need to clone it from the website. To do that type in `git clone https://github.com/ngwessels/React-Project-1`
+  5. Once its finished downloading, type in `npm install`. This will download any developer/dependencies from its package.json file. This step may take a few minutes.
+  6. Once finished type in `npm run start` to launch the server
+  7. Now go to your Google Chrome browser and enter this address in the address form `http://localhost:8080/#/`. And press `Enter`
 
-_If you run `npm run lint` on pc you will get `Expected linebreaks to be 'LF' but found 'CRLF'`. It doesn't break the code and will still run correctly when you run `npm run start`_
 
-## Support and contact details
+### App Routes tree
+_Below is an image of the App Routes Tree_
+![App Routes Tree](src/assets/img/AppRoutes.png)
 
-_Please contact Ryan McLean at rmcleandev@gmail.com_
 
-## Technologies Used
 
-_scss_
-_Webpack_
-_React_
-_eslint_
-_AOS_
+### Features
+_Below is a list of features this application has_
+  1. React
+
+### Possible Features in the Future
+_Below is a list of planned features that have not been worked on yet_
+  1. Firebase Storage. Storing all photos
+  2. API Call getting realtime weather Informatiom
+
+### Known Bugs
+* None identified
+
+### Support and Contact Details
+
+_Contact Nate Wesses at nwessels16@gmail.com_
+
+### Technologies Used
+* HTML 5
+* Javascript
+* React
+* SCSS
+* Webpack
 
 ### License
 
-*This Software is Licensed under the MIT License.*
 
-Copyright (c) 2019 **_Ryan McLean_**
+_Copyright (c) 2019 Nate Wessels, Epicodus_
+
+_Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:_
+
+_The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software._
+
+_THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE._
