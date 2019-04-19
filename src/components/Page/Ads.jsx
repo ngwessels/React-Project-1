@@ -50,7 +50,6 @@ function Ads() {
         </div>
       </div>
     </div>
-
   );
 }
 

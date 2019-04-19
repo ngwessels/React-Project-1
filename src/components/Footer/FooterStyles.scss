@@ -1,0 +1,73 @@
+.footer {
+  margin-top: 50px;
+  background-color: rgb(218,218,218);
+  width: 100%;
+  height: 346.875px;
+  display: flex;
+  flex-direction: column;
+  .top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    #connect{
+      width: 300px;
+      height: 100px;
+    }
+    #owners {
+      width: 225px;
+      height: 100px;
+    }
+  }
+  .bottom {
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    #top-ul {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 40px;
+      justify-content: space-between;
+      list-style-type: none;
+      li {
+        list-style-type: none;
+      }
+      li:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    #bottom-ul {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 20px;
+      justify-content: space-around;
+      height: 20px;
+
+      li {
+        list-style-type: none;
+      }
+      li:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    img {
+      width: 400px;
+      height: 100px;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+
+#georgia {
+  width: 100px;
+  height: 34px;
+}

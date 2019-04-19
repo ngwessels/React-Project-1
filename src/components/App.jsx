@@ -3,6 +3,7 @@ import Header from './navBar/Header';
 import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
 import Page from './Page/PageBody';
+import FooterMain from './Footer/FooterMain';
 function App(){
   return (
     <div>
@@ -11,7 +12,7 @@ function App(){
         <Route exact path='/' component={Page}/>
         <Route component={Error404}/>
       </Switch>
-      <h1 style={{height: '50px'}}></h1>
+      <FooterMain />
     </div>
   );
 }
