@@ -26,7 +26,7 @@ _This application will display a cloned version of the "www.weather.com" website
 #### Footer of the Real Website
 ![Footer of the Real Weather Channel Website](src/assets/img/footer-real.png)
 
-### Cloned Webiste
+### Cloned Website
 
 #### Top of the Cloned Website
 ![Top of the Cloned Weather Channel Website](src/assets/img/top-clone.png)
