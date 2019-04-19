@@ -5,6 +5,7 @@ import TopNews from './TopNews';
 import Trending from './Trending';
 import WeatherMap from './WeatherMap';
 import Recommended from './Recommended';
+import Ads from './Ads';
 
 
 
@@ -32,6 +33,7 @@ function PageBody() {
         <img src={require('../../assets/img/ad7.png')} alt="Ad" id='ad7' />
         <hr />
         <Recommended />
+        <Ads />
       </div>
     </div>
 

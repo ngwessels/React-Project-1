@@ -4,12 +4,6 @@ import React from 'react';
 
 
 function Recommended() {
-  let style = {
-    width: '100%',
-    height: '300p',
-  }
-
-
   return (
     <div className='fourth'>
       <h3>RECOMMENDED</h3>
