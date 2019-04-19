@@ -60,7 +60,7 @@ _Below is a list of features this application has_
 ### Possible Features in the Future
 _Below is a list of planned features that have not been worked on yet_
   1. Firebase Storage. Storing all photos
-  2. API Call getting realtime weather Informatiom
+  2. API Call getting realtime weather Information
 
 ### Known Bugs
 * None identified
