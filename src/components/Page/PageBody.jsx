@@ -4,7 +4,11 @@ import TopAd from './TopAd';
 import TopNews from './TopNews';
 import Trending from './Trending';
 import WeatherMap from './WeatherMap';
+import Recommended from './Recommended';
 
+
+
+import './pageStyles.scss';
 
 
 
@@ -25,6 +29,9 @@ function PageBody() {
         <hr/>
         <Trending />
         <WeatherMap />
+        <img src={require('../../assets/img/ad7.png')} alt="Ad" id='ad7' />
+        <hr />
+        <Recommended />
       </div>
     </div>
 

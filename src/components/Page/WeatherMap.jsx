@@ -6,7 +6,7 @@ function WeatherMap() {
   let third = {
     display: 'flex',
     flexDirection: 'row',
-  }
+  };
 
 
   return (
@@ -25,8 +25,6 @@ function WeatherMap() {
         </div>
       </div>
     </div>
-
-
 
   );
 }
