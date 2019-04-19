@@ -11,7 +11,7 @@ _Author_ **Nate Wessels**
 
 ### Description
 
-_This Application will show a cloned version of the Weather Channel Website. It is using the Angular framework. This application shows the use of inputs and outputs between child and parent components. This application also shows the use of firebase database, and firebase hosting. Go to https://angular-project-acaab.firebaseapp.com/ to look at the page_
+_This Application will show a cloned version of the Weather Channel Website. It is using React. It shows the use of JSX._
 
 ### Specs
 
