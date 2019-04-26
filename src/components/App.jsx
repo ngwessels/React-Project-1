@@ -12,7 +12,9 @@ class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      masterList:[],
+      masterList:[
+        {link: 'https://weather.com/weather/today', name: 'Today', key: 1},
+      ],
     };
   }
 
