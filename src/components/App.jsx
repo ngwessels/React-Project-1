@@ -10,7 +10,10 @@ import FooterMain from './Footer/FooterMain';
 
 class App extends React.Component{
   constructor(props) {
-    super(props)
+    super(props);
+    this.state = {
+      masterList:[],
+    };
   }
 
 
@@ -18,7 +21,7 @@ class App extends React.Component{
   render() {
     return (
       <div>
-        <Header/>
+        <Header list={this.state.masterList} />
         <Switch>
           <Route exact path='/' component={Page}/>
           <Route component={Error404}/>
