@@ -11,9 +11,11 @@ import FooterMain from './Footer/FooterMain';
 class App extends React.Component{
   constructor(props) {
     super(props);
+    var current = {link: 'https://weather.com/weather/today', name: 'Today'}
     this.state = {
       masterList:[
-        {link: 'https://weather.com/weather/today', name: 'Today', key: 1},
+        {[1]: {link: 'https://weather.com/weather/today', name: 'Today'},
+        [2]: {link: 'https://weather.com/weather/today', name: 'Today'}},
       ],
     };
   }
@@ -23,7 +25,7 @@ class App extends React.Component{
   render() {
     return (
       <div>
-        <Header list={this.state.masterList} />
+        <Header list={this.state} />
         <Switch>
           <Route exact path='/' component={Page}/>
           <Route component={Error404}/>

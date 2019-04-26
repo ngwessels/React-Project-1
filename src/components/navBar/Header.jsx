@@ -30,7 +30,7 @@ class Header extends React.Component{
 }
 
 Header.propTypes = {
-  list: PropTypes.array,
+  list: PropTypes.object,
 }
 
 
