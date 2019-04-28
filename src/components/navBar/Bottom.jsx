@@ -17,9 +17,9 @@ class Bottom extends React.Component {
       margin: '0 auto',
       marginTop: '0px',
     };
-    let results = this.object.map(function(items) =>
+    let results = this.object.map((items) =>
       <Links key={items.id} url={items.url} name={items.name} />
-    )
+    );
 
     return(
       <div>
