@@ -5,10 +5,12 @@ class Bottom extends React.Component {
   constructor(props) {
     super(props);
     this.state = props.list;
-    this.object = this.state.list.masterList[0];
+    this.object = this.state.list;
   }
 
   render() {
+    let that = this;
+    let currentObject = this.object;
     console.log(this.object);
     let style = {
       color: 'white',
@@ -17,13 +19,35 @@ class Bottom extends React.Component {
       margin: '0 auto',
       marginTop: '0px',
     };
-    let results = this.object.map((items) =>
-      <Links key={items.id} url={items.url} name={items.name} />
-    );
 
+    let allLinks = {
+      display: 'flex',
+      flexDirection: 'row',
+      maxWidth: '1370px',
+      width: '80%',
+      justifyContent: 'center',
+      height: '20px'
+    }
+    let container = {
+      width: '100%',
+      height: '20px',
+      display: 'flex',
+      justifyContent: 'space-around',
+      flexDirection: 'row',
+      alignItems: 'center'
+
+    }
+
+    console.log(this.object.masterList);
     return(
-      <div>
-        {Links}
+      <div style={allLinks}>
+        <div style={container}>
+          {that.object.masterList.map((items, index) => (
+            <a href={items.url}>
+              <Links key={index} url={items.url} name={items.name} />
+            </a>
+          ))}
+        </div>
       </div>
     );
   }

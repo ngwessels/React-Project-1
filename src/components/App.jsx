@@ -14,8 +14,7 @@ class App extends React.Component{
     var current = {link: 'https://weather.com/weather/today', name: 'Today'}
     this.state = {
       masterList:[
-        {[1]: {link: 'https://weather.com/weather/today', name: 'Today'},
-        [2]: {link: 'https://weather.com/weather/today', name: 'Today'}},
+        {link: 'https://weather.com/weather/today', name: 'Today'}, {link:'https://weather.com/weather/today', name: 'Today'},
       ],
     };
   }

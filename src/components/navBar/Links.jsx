@@ -7,7 +7,7 @@ function Links(props) {
 
 
   return (
-    <a href={props.url}><li key={props.key}>{props.name}</li></a>
+    <li key={props.key}>{props.name}</li>
   );
 }
 
