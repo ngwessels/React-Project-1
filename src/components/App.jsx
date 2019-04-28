@@ -22,6 +22,12 @@ class App extends React.Component{
         {link: 'https://weather.com/weather/radar/interactive', name: 'Maps'},
         {name: 'More'}
       ],
+      FooterTop: [
+        {info: 'FeedBack'}, {info: 'Careers'}, {info: 'Download Apps'}, {info: 'Press Room'}, {info: 'Advertise With Us'}, {info: 'TV'}, {info: 'Newsletters and Alerts'}
+      ],
+      FooterBottom: [
+        {info: 'Terms of Use'}, {info: 'Privacy Policy'}, {info: 'Parental Controls'}, {info: 'Ad Choice'}, {info: 'Ad Partners'}, {info: 'Analytics Partners'}, {info: 'Data Rights'}
+      ]
     };
   }
 
@@ -35,7 +41,7 @@ class App extends React.Component{
           <Route exact path='/' component={Page}/>
           <Route component={Error404}/>
         </Switch>
-        <FooterMain />
+        <FooterMain list={this.state}/>
       </div>
     );
   }

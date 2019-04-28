@@ -18,7 +18,6 @@ class Bottom extends React.Component {
   render() {
     let that = this;
     let currentObject = this.object;
-    console.log(this.object);
     let style = {
       color: 'white',
       width: '80%',
