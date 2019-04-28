@@ -7,7 +7,7 @@ function Links(props) {
 
 
   return (
-    <li key={props.key}>{props.name}</li>
+    <li>{props.name}</li>
   );
 }
 

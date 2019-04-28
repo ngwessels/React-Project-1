@@ -13,8 +13,14 @@ class App extends React.Component{
     super(props);
     var current = {link: 'https://weather.com/weather/today', name: 'Today'}
     this.state = {
-      masterList:[
-        {link: 'https://weather.com/weather/today', name: 'Today'}, {link:'https://weather.com/weather/today', name: 'Today'},
+      navBar:[
+        {link: 'https://weather.com/weather/today', name: 'Today'}, {link:'https://weather.com/weather/hourly', name: 'Hourly'},
+        {link: 'https://weather.com/weather/5day', name: 'Fiveday'},
+        {link: 'https://weather.com/weather/tenday', name: 'Tenday'},
+        {link: 'https://weather.com/weather/weekend', name: 'Weekend'},
+        {link: 'https://weather.com/weather/monthly', name: 'Monthly'},
+        {link: 'https://weather.com/weather/radar/interactive', name: 'Maps'},
+        {name: 'More'}
       ],
     };
   }

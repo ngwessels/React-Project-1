@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Links from './Links.jsx';
+import './navBarStyles.scss';
+
+
+
+
+
+
 class Bottom extends React.Component {
   constructor(props) {
     super(props);
@@ -20,31 +27,14 @@ class Bottom extends React.Component {
       marginTop: '0px',
     };
 
-    let allLinks = {
-      display: 'flex',
-      flexDirection: 'row',
-      maxWidth: '1370px',
-      width: '80%',
-      justifyContent: 'center',
-      height: '20px'
-    }
-    let container = {
-      width: '100%',
-      height: '20px',
-      display: 'flex',
-      justifyContent: 'space-around',
-      flexDirection: 'row',
-      alignItems: 'center'
 
-    }
-
-    console.log(this.object.masterList);
+    console.log(this.object.navBar);
     return(
-      <div style={allLinks}>
-        <div style={container}>
-          {that.object.masterList.map((items, index) => (
-            <a href={items.url}>
-              <Links key={index} url={items.url} name={items.name} />
+      <div className='bottom-nav'>
+        <div className='bottom-nav-width'>
+          {that.object.navBar.map((items, index) => (
+            <a href={items.url} className='linkTags' key={index}>
+              <Links url={items.url} name={items.name} />
             </a>
           ))}
         </div>
