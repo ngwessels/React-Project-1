@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './FooterStyles.scss';
 import PropTypes from 'prop-types';
-class FooterMain extends React.Component {
 
+
+
+class FooterMain extends React.Component {
   constructor(props) {
     super(props);
     this.state = props;
   }
   render() {
     let that = this;
-    console.log(this.state);
     return (
       <div className='footer'>
         <div className='top'>
@@ -37,6 +38,6 @@ class FooterMain extends React.Component {
 
 FooterMain.propTypes = {
   list: PropTypes.object,
-}
+};
 
 export default FooterMain;

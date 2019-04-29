@@ -1,12 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Links from './Links.jsx';
 import './navBarStyles.scss';
-
-
-
-
-
 
 class Bottom extends React.Component {
   constructor(props) {
@@ -17,17 +12,6 @@ class Bottom extends React.Component {
 
   render() {
     let that = this;
-    let currentObject = this.object;
-    let style = {
-      color: 'white',
-      width: '80%',
-      height: '20px',
-      margin: '0 auto',
-      marginTop: '0px',
-    };
-
-
-    console.log(this.object.navBar);
     return(
       <div className='bottom-nav'>
         <div className='bottom-nav-width'>
@@ -43,6 +27,6 @@ class Bottom extends React.Component {
 }
 Bottom.propTypes = {
   list: PropTypes.object,
-}
+};
 
 export default Bottom;

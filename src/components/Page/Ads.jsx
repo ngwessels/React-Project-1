@@ -4,7 +4,6 @@ import './pageStyles.scss';
 
 
 function Ads() {
-
   return (
     <div className='fifth'>
       <div className='container'>

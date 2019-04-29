@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './navBar/Header';
 import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
@@ -11,7 +11,6 @@ import FooterMain from './Footer/FooterMain';
 class App extends React.Component{
   constructor(props) {
     super(props);
-    var current = {link: 'https://weather.com/weather/today', name: 'Today'}
     this.state = {
       navBar:[
         {link: 'https://weather.com/weather/today', name: 'Today'}, {link:'https://weather.com/weather/hourly', name: 'Hourly'},

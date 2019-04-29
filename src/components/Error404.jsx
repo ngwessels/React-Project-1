@@ -10,7 +10,6 @@ function Error404(props){
     </div>
   );
 }
-
 Error404.propTypes={
   location: PropTypes.object
 };
