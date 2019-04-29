@@ -16,8 +16,8 @@ class Bottom extends React.Component {
       <div className='bottom-nav'>
         <div className='bottom-nav-width'>
           {that.object.navBar.map((items, index) => (
-            <a href={items.url} className='linkTags' key={index}>
-              <Links url={items.url} name={items.name} />
+            <a href={items.link} className='linkTags' key={index}>
+              <Links url={items.link} name={items.name} />
             </a>
           ))}
         </div>

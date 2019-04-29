@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import './navBarStyles.scss';
 
 function Links(props) {
 
-
+  let links = {
+    textDecoration: 'none',
+    listStyleType: 'none'
+  }
 
   return (
-    <li>{props.name}</li>
+    <li className='linkStyle'>{props.name}</li>
   );
 }
 
