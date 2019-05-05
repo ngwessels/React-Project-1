@@ -1,14 +1,17 @@
 import React from 'react';
 import './FooterStyles.scss';
 import PropTypes from 'prop-types';
-
+import Links from './Links';
 
 
 class FooterMain extends React.Component {
   constructor(props) {
     super(props);
-    this.state = props;
+    this.state = props.list;
+    this.FooterTop = props.footerTop;
+    this.FooterBottom = props.footerBottom;
   }
+
   render() {
     let that = this;
     return (
@@ -19,13 +22,13 @@ class FooterMain extends React.Component {
         </div>
         <div className='bottom'>
           <ul id='top-ul'>
-            {that.state.list.FooterTop.map((items, index) => (
-            <li key={index}>{items.info}</li>
+            {that.state.FooterTop.map((items, index) => (
+              <Links key={index} index={index} name={items.info} handle={this.FooterTop} prevName={items.prevName} />
             ))}
           </ul>
           <ul id='bottom-ul'>
-            {that.state.list.FooterBottom.map((items, index) => (
-            <li key={index}>{items.info}</li>
+            {that.state.FooterBottom.map((items, index) => (
+              <Links key={index} index={index} name={items.info} handle={this.FooterBottom} prevName={items.prevName} />
             ))}
           </ul>
           <img id='georgia' src={require('../../assets/img/georgia.png')} alt='georgia' />
@@ -38,6 +41,8 @@ class FooterMain extends React.Component {
 
 FooterMain.propTypes = {
   list: PropTypes.object,
+  footerTop: PropTypes.func,
+  footerBottom: PropTypes.func,
 };
 
 export default FooterMain;
