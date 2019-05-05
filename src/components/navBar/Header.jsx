@@ -19,12 +19,13 @@ class Header extends React.Component{
       <div style={headerStyle}>
         <Top />
         <Middle />
-        <Bottom list={this.state}/>
+        <Bottom list={this.state.list} handle={this.state.handle} />
       </div>
     );
   }
 }
 Header.propTypes = {
   list: PropTypes.object,
+  handle: PropTypes.func,
 };
 export default Header;

@@ -6,18 +6,20 @@ import './navBarStyles.scss';
 class Bottom extends React.Component {
   constructor(props) {
     super(props);
-    this.state = props.list;
-    this.object = this.state.list;
+    this.handle = props.handle;
+    this.state = props;
+    this.object = this.state.list.navBar;
   }
 
   render() {
     let that = this;
+    console.log(this.object);
     return(
       <div className='bottom-nav'>
         <div className='bottom-nav-width'>
-          {that.object.navBar.map((items, index) => (
+          {that.object.map((items, index) => (
             <a href={items.link} className='linkTags' key={index}>
-              <Links url={items.link} name={items.name} />
+              <Links name={items.name} index={index} handle={this.handle} prevName={items.prevName}/>
             </a>
           ))}
         </div>
@@ -27,6 +29,8 @@ class Bottom extends React.Component {
 }
 Bottom.propTypes = {
   list: PropTypes.object,
+  handle: PropTypes.func,
+
 };
 
 export default Bottom;
