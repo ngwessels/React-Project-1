@@ -1,8 +1,5 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
-
-
 
 function Links(props) {
 
@@ -10,16 +7,10 @@ function Links(props) {
     props.handle(props.index);
   }
 
-return (
-  <li onClick={handleClick}>{props.name}</li>
-)
-
-
-
-
-
+  return (
+    <li onClick={handleClick}>{props.name}</li>
+  )
 }
-
 Links.propTypes = {
   name: PropTypes.string,
   index: PropTypes.number,

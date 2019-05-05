@@ -48,8 +48,8 @@ _Below are the steps to follow to install this application_
 
 
 ### App Routes tree
-_Below is an image of the App Routes Tree_
-![App Routes Tree](src/assets/img/AppRoutes.png)
+_Below is an image of the App Routes Tree. And the direction of state flow_
+![App Routes Tree](src/assets/img/Component-Tree-with-state.png)
 
 
 

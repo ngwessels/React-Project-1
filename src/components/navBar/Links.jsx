@@ -8,7 +8,6 @@ function Links(props) {
     listStyleType: 'none'
   }
 
-
   function handleClick() {
     props.handle(props.index, 'Clicked');
   }
@@ -17,8 +16,6 @@ function Links(props) {
     <li className='linkStyle' onClick={handleClick} >{props.name} </li>
   );
 }
-
-
 
 Links.propTypes = {
   name: PropTypes.string,
