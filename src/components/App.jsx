@@ -35,49 +35,48 @@ class App extends React.Component{
 
   }
 
-  navbarClick(num, newName, prevName) {
+  navbarClick(num) {
     let reName = Object.assign(this.state.navBar);
     let currentName;
-    if(this.state.navBar[num].name == 'Clicked') {
-      console.log(this.state.navBar[num]);
+    if(this.state.navBar[num].name != this.state.navBar[num].prevName && this.state.navBar[num].prevName != undefined) {
       currentName = this.state.navBar[num].prevName;
       reName[num].name = currentName;
     } else {
-      console.log(this.state.navBar[num]);
+      const userInput = prompt("What do you want the new link to say?");
       currentName = this.state.navBar[num].name;
       reName[num].prevName = currentName;
-      reName[num].name = newName;
+      reName[num].name = userInput;
     }
     this.setState({ reName });
   }
 
-  footertopClick(num, newName, prevName) {
+  footertopClick(num) {
     let reName = Object.assign(this.state.FooterTop);
     let currentName;
-    if(this.state.FooterTop[num].info == 'Clicked') {
-      console.log(this.state.FooterTop[num]);
+    console.log(this.state.FooterTop[num]);
+    if(this.state.FooterTop[num].info != this.state.FooterTop[num].prevName && this.state.FooterTop[num].prevName != undefined) {
       currentName = this.state.FooterTop[num].prevName;
       reName[num].info = currentName;
     } else {
-      console.log(this.state.FooterTop[num]);
+      const userInput = prompt("What do you want the new link to say?");
       currentName = this.state.FooterTop[num].info;
       reName[num].prevName = currentName;
-      reName[num].info = newName;
+      reName[num].info = userInput;
     }
     this.setState({ reName });
   }
 
-  footerbottomClick(num, newName, prevName) {
+  footerbottomClick(num) {
     let reName = Object.assign(this.state.FooterBottom);
     let currentName;
-    console.log(this.state.FooterBottom[num])
-    if(this.state.FooterBottom[num].info == 'Clicked') {
+    if(this.state.FooterBottom[num].info != this.state.FooterBottom[num].prevName && this.state.FooterBottom[num].prevName != undefined) {
       currentName = this.state.FooterBottom[num].prevName;
       reName[num].info = currentName;
     } else {
+      const userInput = prompt("What do you want the new link to say?");
       currentName = this.state.FooterBottom[num].info;
       reName[num].prevName = currentName;
-      reName[num].info = newName;
+      reName[num].info = userInput;
     }
     this.setState({ reName });
   }

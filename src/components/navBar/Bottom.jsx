@@ -13,7 +13,6 @@ class Bottom extends React.Component {
 
   render() {
     let that = this;
-    console.log(this.object);
     return(
       <div className='bottom-nav'>
         <div className='bottom-nav-width'>

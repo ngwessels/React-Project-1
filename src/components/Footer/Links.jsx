@@ -7,8 +7,7 @@ import PropTypes from 'prop-types';
 function Links(props) {
 
   function handleClick() {
-    console.log(props.index)
-    props.handle(props.index, 'Clicked');
+    props.handle(props.index);
   }
 
 return (
