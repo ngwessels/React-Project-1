@@ -39,7 +39,7 @@ class App extends React.Component{
     let reName = Object.assign(this.state.navBar);
     let currentName;
     if(this.state.navBar[num].pressedTotal > 5) {
-      reName[num].name = "";
+      delete this.state.navBar[num];
     } else {
       if(this.state.navBar[num].name != this.state.navBar[num].prevName && this.state.navBar[num].prevName != undefined) {
         currentName = this.state.navBar[num].prevName;
@@ -61,7 +61,7 @@ class App extends React.Component{
     let currentName;
     console.log(this.state.FooterTop[num]);
     if(this.state.FooterTop[num].pressedTotal > 5) {
-      reName[num].info = "";
+      delete this.state.FooterTop[num];
     } else {
       if(this.state.FooterTop[num].info != this.state.FooterTop[num].prevName && this.state.FooterTop[num].prevName != undefined) {
         currentName = this.state.FooterTop[num].prevName;
@@ -82,19 +82,20 @@ class App extends React.Component{
     let reName = Object.assign(this.state.FooterBottom);
     let currentName;
     if(this.state.FooterBottom[num].pressedTotal > 5) {
-      reName[num].info = "";
-    }
-    if(this.state.FooterBottom[num].info != this.state.FooterBottom[num].prevName && this.state.FooterBottom[num].prevName != undefined) {
-      currentName = this.state.FooterBottom[num].prevName;
-      reName[num].info = currentName;
-      reName[num].pressedTotal = this.state.FooterBottom[num].pressedTotal + 1;
-      console.log(this.state.FooterBottom[num].pressedTotal)
+      delete this.state.FooterBottom[num];
     } else {
-      const userInput = prompt("What do you want the new link to say?");
-      currentName = this.state.FooterBottom[num].info;
-      reName[num].prevName = currentName;
-      reName[num].info = userInput;
-      reName[num].pressedTotal = this.state.FooterBottom[num].pressedTotal + 1;
+      if(this.state.FooterBottom[num].info != this.state.FooterBottom[num].prevName && this.state.FooterBottom[num].prevName != undefined) {
+        currentName = this.state.FooterBottom[num].prevName;
+        reName[num].info = currentName;
+        reName[num].pressedTotal = this.state.FooterBottom[num].pressedTotal + 1;
+        console.log(this.state.FooterBottom[num].pressedTotal)
+      } else {
+        const userInput = prompt("What do you want the new link to say?");
+        currentName = this.state.FooterBottom[num].info;
+        reName[num].prevName = currentName;
+        reName[num].info = userInput;
+        reName[num].pressedTotal = this.state.FooterBottom[num].pressedTotal + 1;
+      }
     }
     this.setState({ reName });
   }
