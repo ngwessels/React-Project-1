@@ -13,20 +13,20 @@ class App extends React.Component{
     super(props);
     this.state = {
       navBar:[
-        { name: 'Today'},
-        { name: 'Hourly' },
-        { name: 'Fiveday' },
-        { name: 'Tenday' },
-        { name: 'Weekend' },
-        { name: 'Monthly' },
-        { name: 'Maps' },
-        { name: 'More' }
+        { name: 'Today', pressedTotal: 0},
+        { name: 'Hourly', pressedTotal: 0 },
+        { name: 'Fiveday', pressedTotal: 0 },
+        { name: 'Tenday', pressedTotal: 0 },
+        { name: 'Weekend', pressedTotal: 0 },
+        { name: 'Monthly', pressedTotal: 0 },
+        { name: 'Maps', pressedTotal: 0 },
+        { name: 'More', pressedTotal: 0 }
       ],
       FooterTop: [
-        {info: 'FeedBack'}, {info: 'Careers'}, {info: 'Download Apps'}, {info: 'Press Room'}, {info: 'Advertise With Us'}, {info: 'TV'}, {info: 'Newsletters and Alerts'}
+        {info: 'FeedBack', pressedTotal: 0}, {info: 'Careers', pressedTotal: 0}, {info: 'Download Apps', pressedTotal: 0}, {info: 'Press Room', pressedTotal: 0}, {info: 'Advertise With Us', pressedTotal: 0}, {info: 'TV', pressedTotal: 0}, {info: 'Newsletters and Alerts', pressedTotal: 0}
       ],
       FooterBottom: [
-        {info: 'Terms of Use'}, {info: 'Privacy Policy'}, {info: 'Parental Controls'}, {info: 'Ad Choice'}, {info: 'Ad Partners'}, {info: 'Analytics Partners'}, {info: 'Data Rights'}
+        {info: 'Terms of Use', pressedTotal: 0}, {info: 'Privacy Policy', pressedTotal: 0}, {info: 'Parental Controls', pressedTotal: 0}, {info: 'Ad Choice', pressedTotal: 0}, {info: 'Ad Partners', pressedTotal: 0}, {info: 'Analytics Partners', pressedTotal: 0}, {info: 'Data Rights', pressedTotal: 0}
       ]
     };
     this.navbarClick = this.navbarClick.bind(this);
@@ -38,14 +38,20 @@ class App extends React.Component{
   navbarClick(num) {
     let reName = Object.assign(this.state.navBar);
     let currentName;
-    if(this.state.navBar[num].name != this.state.navBar[num].prevName && this.state.navBar[num].prevName != undefined) {
-      currentName = this.state.navBar[num].prevName;
-      reName[num].name = currentName;
+    if(this.state.navBar[num].pressedTotal > 5) {
+      reName[num].name = "";
     } else {
-      const userInput = prompt("What do you want the new link to say?");
-      currentName = this.state.navBar[num].name;
-      reName[num].prevName = currentName;
-      reName[num].name = userInput;
+      if(this.state.navBar[num].name != this.state.navBar[num].prevName && this.state.navBar[num].prevName != undefined) {
+        currentName = this.state.navBar[num].prevName;
+        reName[num].name = currentName;
+        reName[num].pressedTotal = this.state.navBar[num].pressedTotal + 1;
+      } else {
+        const userInput = prompt("What do you want the new link to say?");
+        currentName = this.state.navBar[num].name;
+        reName[num].prevName = currentName;
+        reName[num].name = userInput;
+        reName[num].pressedTotal = this.state.navBar[num].pressedTotal + 1;
+      }
     }
     this.setState({ reName });
   }
@@ -54,14 +60,20 @@ class App extends React.Component{
     let reName = Object.assign(this.state.FooterTop);
     let currentName;
     console.log(this.state.FooterTop[num]);
-    if(this.state.FooterTop[num].info != this.state.FooterTop[num].prevName && this.state.FooterTop[num].prevName != undefined) {
-      currentName = this.state.FooterTop[num].prevName;
-      reName[num].info = currentName;
+    if(this.state.FooterTop[num].pressedTotal > 5) {
+      reName[num].info = "";
     } else {
-      const userInput = prompt("What do you want the new link to say?");
-      currentName = this.state.FooterTop[num].info;
-      reName[num].prevName = currentName;
-      reName[num].info = userInput;
+      if(this.state.FooterTop[num].info != this.state.FooterTop[num].prevName && this.state.FooterTop[num].prevName != undefined) {
+        currentName = this.state.FooterTop[num].prevName;
+        reName[num].info = currentName;
+        reName[num].pressedTotal = this.state.FooterTop[num].pressedTotal + 1;
+      } else {
+        const userInput = prompt("What do you want the new link to say?");
+        currentName = this.state.FooterTop[num].info;
+        reName[num].prevName = currentName;
+        reName[num].info = userInput;
+        reName[num].pressedTotal = this.state.FooterTop[num].pressedTotal + 1;
+      }
     }
     this.setState({ reName });
   }
@@ -69,14 +81,20 @@ class App extends React.Component{
   footerbottomClick(num) {
     let reName = Object.assign(this.state.FooterBottom);
     let currentName;
+    if(this.state.FooterBottom[num].pressedTotal > 5) {
+      reName[num].info = "";
+    }
     if(this.state.FooterBottom[num].info != this.state.FooterBottom[num].prevName && this.state.FooterBottom[num].prevName != undefined) {
       currentName = this.state.FooterBottom[num].prevName;
       reName[num].info = currentName;
+      reName[num].pressedTotal = this.state.FooterBottom[num].pressedTotal + 1;
+      console.log(this.state.FooterBottom[num].pressedTotal)
     } else {
       const userInput = prompt("What do you want the new link to say?");
       currentName = this.state.FooterBottom[num].info;
       reName[num].prevName = currentName;
       reName[num].info = userInput;
+      reName[num].pressedTotal = this.state.FooterBottom[num].pressedTotal + 1;
     }
     this.setState({ reName });
   }
